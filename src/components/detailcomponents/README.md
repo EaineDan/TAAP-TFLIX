@@ -1,0 +1,1 @@
+Kindly put all components of movie details here
