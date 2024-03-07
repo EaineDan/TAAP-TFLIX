@@ -1,9 +1,6 @@
-
-
-const Navbar = () => {
-  return (
-    <div>Navbar is displayed here</div>
+export default function Navbar() {
+  return(
+    <>
+    </>
   )
 }
-
-export default Navbar;
