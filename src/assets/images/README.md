@@ -1,0 +1,1 @@
+please put all images and videos in their separate folders 
