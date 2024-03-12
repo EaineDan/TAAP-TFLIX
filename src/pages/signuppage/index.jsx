@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const LogIn = () => {
+const SignUp = () => {
   return (
-   <>
-   <form>
-    <h1>Login</h1>
-   </form>
-   </>
-  )
-}
+    <>
+      <h1>SignUp</h1>
+    </>
+  );
+};
 
-export default LogIn;
+export default SignUp;
