@@ -1,16 +1,18 @@
 import Footer from "../../components/landcomponents/footer";
 import Navbar from "../../components/landcomponents/navbar";
-import Newrelease from "../../components/landcomponents/newrelease";
+import NewReleased from "../../components/landcomponents/newrelease";
 import Popular from "../../components/landcomponents/popular";
-import Slider from "../../components/landcomponents/slider";
-import Toprated from "../../components/landcomponents/toprated";
+import TopRated from "../../components/landcomponents/toprated";
+import MovieSlider from "../../components/landcomponents/videoslider";
+
+
 
 export default function Landingpage() {
   return <>
   <Navbar/>
-  <Slider/>
-  <Newrelease/>
-  <Toprated/>
+  <MovieSlider/>
+  <NewReleased/>
+  <TopRated/>
   <Popular/>
   <Footer/>
   </>;

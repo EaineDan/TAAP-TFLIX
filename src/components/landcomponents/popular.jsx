@@ -1,19 +1,74 @@
+import React, { useEffect, useState } from "react";
 
+const Popular = () => {
+  const [movies, setMovies] = useState([]);
+  const [page, setPage] = useState(1);
+  const [isLoading] = useState(false); 
 
+  useEffect(() => {
+    const fetchPopularMovies = async () => {
+      try {
+        const response = await fetch(
+          "https://api.themoviedb.org/3/movie/popular?api_key=ee4f8727d85b0242c3871ddae6ad3c55"
+        );
+        const json = await response.json();
+        setMovies(json.results);
+      } catch (error) {
+        console.error("Error fetching popular movie data:", error);
+      }
+    };
 
-export default function Popular() {
+    fetchPopularMovies();
+
+    // Cleanup function (optional)
+    return () => {
+      // Any cleanup code here
+    };
+  }, [page]);
+
+  const handleSeeMore = () => {
+    setPage((prevPage) => prevPage + 1); // Increment page number to fetch more movies
+  };
+
   return (
-    <div
-      className="flex-shrink-0 mx-5 bg-white shadow-md overflow-hidden rounded-xl"
-      style={{ width: "250px", height: "400px" }}
-    >
+    <div className="mx-5 bg-white shadow-md overflow-hidden rounded-xl" >
       <h2 className="font-bold py-2">Popular Movies</h2>
-      <div className="bg-gray-400 rounded-lg shadow-lg p-2 flex flex-col justify-between h-full">
-        <h2 className="text-xl font-semibold text-gray-800">Card Title</h2>
+      <div className="flex overflow-x-auto">
+        {movies.map((movie, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 mr-4"
+            style={{ width: "250px", height: "400px" }}
+          >
+            <div className="max-w-xs bg-gray-100 rounded-lg overflow-hidden h-full">
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt={movie.title}
+                className="w-full h-3/4 object-cover"
+              />
+              <div className="p-4 h-1/4 flex flex-col justify-between">
+                <h2 className="text-lg font-semibold text-gray-800">
+                  {movie.title}
+                </h2>
+                <p className="text-sm text-gray-600">{movie.release_date}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="px-4 py-2">Card content goes here.</div>
-      <div className="px-4 py-2 flex justify-end">
+      <div className="flex justify-center py-2">
+        <button
+          onClick={handleSeeMore}
+          className={`bg-blue-500 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded ${
+            isLoading ? "opacity-50 cursor-not-allowed" : ""
+          }`}
+          disabled={isLoading}
+        >
+          See More
+        </button>
       </div>
     </div>
   );
-}
+};
+
+export default Popular;

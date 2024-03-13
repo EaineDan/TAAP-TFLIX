@@ -6,8 +6,17 @@ export default function Navbar() {
       <span>Home</span>
       <span>Movies</span>
       <span>TV Series</span>
-      <span>Pricing</span>
-      <button className="bg-pink-500 text-white rounded hover:bg-blue-600" style={{width: "70px", height: "30px"}}>Sign in</button>
+      <input
+        type="text"
+        placeholder="Search movies..."
+        className="px-2 py-1 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-gray-600"
+      />
+      <button
+        className="bg-pink-500 text-white rounded hover:bg-blue-600"
+        style={{ width: "70px", height: "30px" }}
+      >
+        Sign in
+      </button>
     </div>
   );
 }
