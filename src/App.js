@@ -2,19 +2,25 @@
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Landingpage from "./pages/landingpage";
-import MovieList from "./pages/movielistpage";
-import MovieDetail from "./pages/moviedetailpage";
+import Signin from "./pages/signinpage";
+import Signup from "./pages/signuppage";
+import Moviedetail from "./pages/moviedetailpage";
+import Movielist from "./pages/movielistpage";
+import SubscriptionPlan from "./pages/subscriptionplan";
 
+const myrouter = createBrowserRouter([
+  {path:"/", element:<Landingpage/>},
+  {path:"/signin", element:<Signin/>},
+  {path:"/signup", element:<Signup/>},
+  {path:"/moviedetail", element:<Moviedetail/>},
+  {path:"/movielist", element:<Movielist/>},
+  {path:"/subscriptionplan", element:<SubscriptionPlan/>},
+])
 
-const router = createBrowserRouter([
-  { path: "/", element: <Landingpage /> },
-  { path: "/movielist", element: <MovieList /> },
-  { path: "/moviedetail", element: <MovieDetail /> },
-]);
 
 function App() {
-  return (
-   <RouterProvider router={router} />)
+  return <RouterProvider router={myrouter}/>;
+  
 }
 
 export default App;
