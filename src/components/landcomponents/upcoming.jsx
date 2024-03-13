@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 
-const NewReleased = () => {
+
+const Upcoming = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1); // Track current page number
 
   useEffect(() => {
-    const fetchNewReleasedMovies = async () => {
+    const fetchUpcomingMovies = async () => {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?api_key=ee4f8727d85b0242c3871ddae6ad3c55&page=2`
+          `https://api.themoviedb.org/3/movie/upcoming?api_key=ee4f8727d85b0242c3871ddae6ad3c55&page=2`
         );
         const json = await response.json();
         setMovies((prevMovies) =>
@@ -19,21 +20,21 @@ const NewReleased = () => {
       }
     };
 
-    fetchNewReleasedMovies();
+    fetchUpcomingMovies();
 
-  
+    
     return () => {
       
     };
   }, [page]);
 
   const handleSeeMore = () => {
-    setPage((prevPage) => prevPage + 1); 
+    setPage((prevPage) => prevPage + 1);
   };
 
   return (
     <div className="mx-5 my-10 bg-white shadow-md overflow-hidden rounded-xl">
-      <h2 className="font-bold p-4 text-3xl font-sans">Newest Release</h2>
+      <h2 className="font-bold p-4 text-3xl font-sans cursor-pointer">Upcoming</h2>
       <div className="flex overflow-x-auto">
         {movies.map((movie, index) => (
           <div
@@ -69,4 +70,4 @@ const NewReleased = () => {
   );
 };
 
-export default NewReleased;
+export default Upcoming;

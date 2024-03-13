@@ -27,12 +27,12 @@ const Popular = () => {
   }, [page]);
 
   const handleSeeMore = () => {
-    setPage((prevPage) => prevPage + 1); // Increment page number to fetch more movies
+    setPage((prevPage) => prevPage + 1); 
   };
 
   return (
     <div className="mx-5 bg-white shadow-md overflow-hidden rounded-xl" >
-      <h2 className="font-bold py-2">Popular Movies</h2>
+      <h2 className="font-bold p-4 text-3xl font-sans cursor-pointer">Popular</h2>
       <div className="flex overflow-x-auto">
         {movies.map((movie, index) => (
           <div
@@ -59,7 +59,7 @@ const Popular = () => {
       <div className="flex justify-center py-2">
         <button
           onClick={handleSeeMore}
-          className={`bg-blue-500 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded ${
+          className={`bg-purple-700 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded ${
             isLoading ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={isLoading}
