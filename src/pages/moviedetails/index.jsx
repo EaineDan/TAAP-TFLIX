@@ -61,20 +61,19 @@ export default function MovieDetails() {
                 </div>
             </div>
             {/* Review deatils */}
-            <div><h1>Rating</h1></div>
+            <div>
+                <h1>Reviews</h1>
+            </div>
 
             <div className="container mx-auto mt-8 grid grid-cols-3 gap-4">
-                {reviews.map(review => (
+                {reviews.slice(0, 6).map(review => (
                     <div key={review.id} className="bg-white p-4 rounded-lg shadow-md">
-                        <div className="flex items-center mb-2">
+                        <div className="flex justify-between items-center mb-2">
                             {review.author_details.avatar_path && (
                                 <img src={`https://www.themoviedb.org/t/p/w64_and_h64_face/${review.author_details.avatar_path}`} alt="Avatar" className="w-8 h-8 rounded-full mr-2" />
                             )}
-                            <div className="flex justify-between">
-                                <span className="text-sm block">{review.author}</span>
-                                <p className="text-sm right-20 text-gray-500 block">Rating: {review.author_details.rating}/10</p>
-                            </div>
-
+                            <span className="text-sm block mr-52">{review.author}</span>
+                                <p className="text-sm text-gray-500 block ml-auto">Rating: {review.author_details.rating}/10</p>
                         </div>
                         <p className="text-sm h-48 overflow-hidden ">{review.content}</p>
 
