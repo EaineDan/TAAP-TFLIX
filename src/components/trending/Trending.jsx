@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import MovieCard from '../movieCard/MovieCard';
 import TrendingTabBar from '../tabs/TrendingTab';
+import MovieCard from '../movieCard/MovieCard';
+
 
 const Trending = () => {
 

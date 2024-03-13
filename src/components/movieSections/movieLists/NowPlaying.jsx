@@ -3,6 +3,7 @@ import axios from "axios";
 import MovieCard from '../../movieCard/MovieCard';
 
 
+
 const NowPlaying = () => {
 
     const BASE_URL = "https://api.themoviedb.org/3"

@@ -15,7 +15,7 @@ const Trending = () => {
             const lastWeekDate = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
 
             try {
-                const response = await axios.get(`${BASE_URL}/trending/all/${activeTab === 'today' ? 'day' : 'week'}`, {
+                const response = await axios.get(`${BASE_URL}/trending/movie/${activeTab === 'today' ? 'day' : 'week'}`, {
                     params: {
                         api_key: process.env.REACT_APP_MOVIE_API_KEY,
                         primary_release_date_gte: activeTab === 'today' ? todayDate : lastWeekDate,

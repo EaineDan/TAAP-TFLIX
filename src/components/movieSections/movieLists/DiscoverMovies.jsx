@@ -4,6 +4,7 @@ import MovieCard from "../../movieCard/MovieCard";
 
 
 
+
 const DiscoverMovies = () => {
     // Define the API URL
     const BASE_URL = "https://api.themoviedb.org/3";
@@ -14,7 +15,7 @@ const DiscoverMovies = () => {
     const fetchMovies = async () => {
         try {
             // Send GET request to the API
-            const response = await axios.get(`${BASE_URL}/discover/movie?language=en-US&page=4`, {
+            const response = await axios.get(`${BASE_URL}/discover/movie?language=en-US&page=6`, {
                 params: {
                     api_key: process.env.REACT_APP_MOVIE_API_KEY
                 }
