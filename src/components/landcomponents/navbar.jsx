@@ -8,6 +8,7 @@ export default function Navbar() {
       <Link to="/"><span>Home</span></Link>
       <Link to="/movielist"><span>Movies</span></Link>
       <Link to="/movielist"><span>TV Series</span></Link>
+      <Link to="/pricing"><span>Pricing</span></Link>
       <input
         type="text"
         placeholder="Search movies..."
