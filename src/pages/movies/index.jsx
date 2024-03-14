@@ -6,6 +6,7 @@ import Popular from "../../components/movieSections/movieLists/Popular";
 import TopRated from "../../components/movieSections/movieLists/TopRated";
 import Upcoming from "../../components/movieSections/movieLists/Upcoming";
 import DiscoverMovies from "../../components/movieSections/movieLists/DiscoverMovies";
+// import SearchModal from "../../components/movieCard/SearchModal";
 import HeroSearchBar from "../../components/searchInput/SearchBar";
 
 
@@ -16,6 +17,7 @@ const Movies = () => {
     return (
         // Main container for the movies page
         <>
+            {/* <SearchModal /> */}
             <HeroSearchBar />
             <main className="container mx-auto mt-20 px-20">
                 {/* Section for trending movies */}
