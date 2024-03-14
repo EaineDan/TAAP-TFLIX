@@ -18,7 +18,7 @@ export default function MovieSlider() {
 
   return (
     <div className="">
-      <Navbar/>
+      <Navbar className="absolute inset-0"/>
       <div className="poster">
         <Carousel
           showThumbs={false}

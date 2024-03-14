@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaStar } from "react-icons/fa";
 
 const Popular = () => {
   const [movies, setMovies] = useState([]);
@@ -51,6 +52,7 @@ const Popular = () => {
                   {movie.title}
                 </h2>
                 <p className="text-sm text-gray-600">{movie.release_date}</p>
+                <p className="text-sm text-gray-600 flex mx-2"><FaStar/>{movie.vote_average}</p>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaStar } from "react-icons/fa";
 
 
 const Upcoming = () => {
@@ -53,6 +54,7 @@ const Upcoming = () => {
                   {movie.title}
                 </h2>
                 <p className="text-sm text-gray-600">{movie.release_date}</p>
+                <p className="text-sm text-gray-600 flex mx-2"><FaStar className="text-yellow-300"/>{movie.vote_average}</p>
               </div>
             </div>
           </div>

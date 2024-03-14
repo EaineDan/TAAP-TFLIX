@@ -1,9 +1,42 @@
-import React from "react";
-import './signup.css'
+import React, {useState} from "react";
+import { FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+
 const SignUpForm = () => {
+
+  const [isOpen, setIsOpen] = useState(true);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <div className="relative bg-gray-800 min-h-screen flex items-center sign ">
-      <div className="max-w-xl mx-auto mt-8 p-8 bg-black bg-opacity-80 rounded-xl shadow-md ">
+    <div
+      className="relative min-h-screen flex items-center justify-center"
+      style={{
+        backgroundImage:
+          "url('https://www.vanas.ca/images/blog/vfx-visual-effects-vanas.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div
+          className={`p-4 max-w-lg mx-auto bg-gray-800 rounded-xl shadow-md m1-4 ${
+            isOpen ? "" : "hidden"
+          }`}
+        >
+          <Link to="/">
+            <div className="flex items-center justify-end">
+              <div
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-red-500 cursor-pointer"
+                onClick={handleClose}
+              >
+                <FaTimes className="text-white" />
+              </div>
+            </div>
+          </Link>
         <h2 className="text-2xl font-bold text-center mb-8 text-white">Sign Up</h2>
         <div> 
           <div className="mb-4">
@@ -71,14 +104,15 @@ const SignUpForm = () => {
           </div>
 
           <div className="text-center">
-            <button
+            <Link to="/movielist"><button
               type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
-            ><a href="/subscriptionplan">Next{" "}</a>
+              className="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-pink-500 focus:outline-none focus:bg-blue-600"
+            >Sign Up{" "}
               
-            </button>
+            </button></Link>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
