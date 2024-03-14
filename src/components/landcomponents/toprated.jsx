@@ -46,7 +46,7 @@ const TopRated = () => {
             className="flex-shrink-0 mr-4"
             style={{ width: "250px", height: "450px" }}
           >
-            <div className="max-w-xs bg-gray-100 rounded-lg overflow-hidden h-full">
+            <div className="max-w-xs bg-gray-100 rounded-lg overflow-hidden h-full transition-transform duration-400 hover:scale-105">
               <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
@@ -71,7 +71,7 @@ const TopRated = () => {
           }`}
           disabled={isLoading}
         >
-          See More
+          View More
         </button>
       </div>
     </div>

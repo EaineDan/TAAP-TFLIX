@@ -15,7 +15,7 @@ export default function Navbar() {
         className="px-2 py-1 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-gray-600"
       />
       <Link to="/signin"><button
-        className="bg-pink-500 text-white rounded hover:bg-blue-600"
+        className="bg-pink-600 text-white rounded hover:bg-purple-500"
         style={{ width: "70px", height: "30px" }}
       >
         Sign in

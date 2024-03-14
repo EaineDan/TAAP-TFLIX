@@ -34,14 +34,14 @@ const NewReleased = () => {
   return (
     <div className="mx-5 my-10 bg-white shadow-md overflow-hidden rounded-xl">
       <h2 className="font-bold p-4 text-3xl font-sans">Newest Release</h2>
-      <div className="flex overflow-x-auto">
+      <div className="flex overflow-x-auto transition-transform duration-400 peer-hover:scale-105">
         {movies.map((movie, index) => (
           <div
             key={index}
             className="flex-shrink-0 mr-4"
             style={{ width: "250px", height: "400px" }}
           >
-            <div className="max-w-xs bg-gray-100 rounded-lg overflow-hidden h-full">
+            <div className="max-w-xs bg-gray-100 rounded-lg overflow-hidden h-full ">
               <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
@@ -60,9 +60,9 @@ const NewReleased = () => {
       <div className="text-center py-2">
         <button
           onClick={handleSeeMore}
-          className="bg-purple-700 text-white rounded px-4 py-2 hover:bg-pink-600"
+          className="bg-purple-700 text-white rounded px-4 font-bold py-2 hover:bg-pink-600"
         >
-          See More
+          View More
         </button>
       </div>
     </div>
