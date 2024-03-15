@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Popular = () => {
   const [movies, setMovies] = useState([]);
@@ -42,11 +43,11 @@ const Popular = () => {
             style={{ width: "250px", height: "400px" }}
           >
             <div className="max-w-xs bg-gray-100 rounded-lg overflow-hidden h-full transition-transform duration-400 hover:scale-105">
-              <img
+            <Link to={`/movies/${movie.id}`}><img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
                 className="w-full h-3/4 object-cover"
-              />
+              /></Link>
               <div className="p-4 h-1/4 flex flex-col justify-between">
                 <h2 className="text-lg font-semibold text-gray-800">
                   {movie.title}
@@ -58,17 +59,14 @@ const Popular = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center py-2">
+      <Link to="/movies"><div className="text-center py-2">
         <button
           onClick={handleSeeMore}
-          className={`bg-purple-700 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded ${
-            isLoading ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-          disabled={isLoading}
+          className="bg-red-500 text-white rounded px-4 font-bold py-2 hover:bg-pink-500"
         >
           View More
         </button>
-      </div>
+      </div></Link>
     </div>
   );
 };

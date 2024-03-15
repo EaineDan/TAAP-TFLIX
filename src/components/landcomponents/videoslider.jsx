@@ -44,13 +44,13 @@ export default function MovieSlider() {
                   alt="Movie"
                 />
               </div>
-              <div className="posterImage__overlay">
-                <div className="posterImage__title">
+              <div className="posterImage__overlay absolute top-1/2  left-0 w-1/2 bg-black/80 leading-loose ">
+                <div className="posterImage__title text-6xl p-4"> 
                   {movie ? movie.original_title : ""}
                 </div>
-                <div className="posterImage__runtime">
+                <div className="posterImage__runtime text-3xl p-4">
                   {movie ? movie.release_date : ""}
-                  <span className="posterImage__rating">
+                  <span className="posterImage__rating text-2xl">
                     {movie ? movie.vote_average : ""}
                     <i className="fas fa-star" />{" "}
                   </span>

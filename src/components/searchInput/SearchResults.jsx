@@ -48,13 +48,13 @@ const SearchResults = () => {
             </div>
 
             {/* Display search results in a responsive grid */}
-            <div className='max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+         {    <div className={`  ${searchResults.length != 0 && 'p-20 bg-black/80 absolute right-0 w-full top-0  left-0'} mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 `}>
                 {searchResults.map((result) => (
                     <div key={result.id} className="bg-gray-100 rounded-lg shadow-lg p-4">
                         <SearchResultCard movie={result} />
                     </div>
                 ))}
-            </div>
+            </div>}
         </div>
     );
 };

@@ -104,9 +104,9 @@ const SignUpForm = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/movielist"><button
+            <Link to="/subscription"><button
               type="submit"
-              className="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-pink-500 focus:outline-none focus:bg-blue-600"
+              className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-pink-500 focus:outline-none focus:bg-blue-600"
             >Sign Up{" "}
               
             </button></Link>
