@@ -1,83 +1,95 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom'
+
+
 
 const BillingForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [country, setCountry] = useState('');
-  const [paymentMethod, setPaymentMethod] = useState('');
-  const [cardInfo, setCardInfo] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', { name, email, country, paymentMethod, cardInfo });
-    // Reset form fields
-    setName('');
-    setEmail('');
-    setCountry('');
-    setPaymentMethod('');
-    setCardInfo('');
-  };
+  
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="mb-4">
-        <label htmlFor="country" className="block text-gray-700 font-bold mb-2">
-          Country
-        </label>
-        <input
-          type="text"
-          id="country"
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          value={country}
-          onChange={(e) => setCountry(e.target.value)}
-          required
-        />
-      </div>
-      <div className="mb-4">
-        <label htmlFor="paymentMethod" className="block text-gray-700 font-bold mb-2">
-          Payment Method
-        </label>
-        <select
-          id="paymentMethod"
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          value={paymentMethod}
-          onChange={(e) => setPaymentMethod(e.target.value)}
-          required
-        >
-          <option value="">Select a payment method</option>
-          <option value="paypal">PayPal</option>
-          <option value="mtnMobileMoney">MTN Mobile Money</option>
-          <option value="card">Card</option>
-          <option value="vodafoneCash">Vodafone Cash</option>
-        </select>
-      </div>
-      {paymentMethod === 'card' && (
-        <div className="mb-4">
-          <label htmlFor="cardInfo" className="block text-gray-700 font-bold mb-2">
-            Card Info
-          </label>
-          <input
-            type="text"
-            id="cardInfo"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            value={cardInfo}
-            onChange={(e) => setCardInfo(e.target.value)}
-            required
-          />
+      <div
+        className="relative min-h-screen flex items-center justify-center"
+        style={{
+          backgroundImage:
+            "url('https://www.vanas.ca/images/blog/vfx-visual-effects-vanas.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div
+            className='p-4 max-w-lg mx-auto bg-gray-800 bg-opacity-80  rounded-xl shadow-md m1-4'
+          >
+            <h2 className="text-3xl font-bold mb-4 text-white text-center">
+              Billing Form
+            </h2>
+            <form>
+              <div className="p-6">
+                <label
+                  htmlFor="country"
+                  className="block text-white font-medium mb-1"
+                >
+                  Country
+                </label>
+                <input
+                  type="country"
+                  id="country"
+                  name="country"
+                  className="w-96 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-transparent text-white"
+                />
+              </div>
+              <div className="p-6 mb-4">
+                <label
+                  htmlFor="phonenumber"
+                  className="block text-white font-medium mb-1"
+                >
+                  Phone number
+                </label>
+                <input
+                  type="phonenumber"
+                  id="phonenumber"
+                  name="phonenumber"
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-transparent text-white"
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="paymentMethod"
+                  className="block text-white font-medium mb-1 mx-7"
+                >
+                  Payment Method
+                </label>
+                <select
+                  id="paymentMethod"
+                  className=" w-96 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-transparent bg-black text-white mx-6"
+                >
+                  <option value="" className='text-black'> Select a payment method</option>
+                  <option value="paypal" className='text-black'>PayPal</option>
+                  <option value="mtnMobileMoney" className='text-black'>MTN Mobile Money</option>
+                  <option value="card" className='text-black'>Card</option>
+                  <option value="vodafoneCash" className='text-black'>Vodafone Cash</option>
+                </select>
+              </div>
+              <div className="mb-6 text-center">
+                <Link to="/confirmation">
+                  <button
+                    type="submit"
+                    className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-pink-500 focus:outline-none focus:bg-blue-600"
+                  >
+                    Submit
+                  </button>
+                </Link>
+              </div>
+            </form>
+          </div>
         </div>
-      )}
-      <div className="flex items-center justify-center">
-       <Link to="/confirmation"> <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Submit
-        </button></Link>
+        <Link to="/">
+          <div className="absolute left-0 top-0 mt-10 ml-16">
+            <h1 className="text-6xl text-red-500 font-bold">TFLIX</h1>
+          </div>
+        </Link>
       </div>
-    </form>
-  );
-};
+    );
+}
 
 export default BillingForm;
