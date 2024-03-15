@@ -1,1 +1,0 @@
-Kindly put all components of landing page here

@@ -1,0 +1,12 @@
+.logo_pic{
+    height: auto;
+    width: 40vh;
+    object-fit: cover;
+}
+
+.poster{
+    background-color: black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
