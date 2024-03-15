@@ -68,10 +68,10 @@ const SignInForm = () => {
               />
             </div>
             <div className="mb-6 text-center">
-              <Link to="/movielist">
+              <Link to="/subscription">
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+                  className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-pink-500 focus:outline-none focus:bg-blue-600"
                 >
                   Sign In
                 </button>

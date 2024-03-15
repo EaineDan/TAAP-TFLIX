@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import play from '../../assets/images/play.png';
+import Footer from "../../components/landcomponents/footer";
 
 export default function MovieDetails() {
     const { id } = useParams();
@@ -79,10 +80,10 @@ export default function MovieDetails() {
             </div>
             {/* Review deatils */}
             <div>
-
-                <h1>Reviews</h1>
+                <h1 className="font-bold text-center text-3xl p-5">Reviews</h1>
                 <div className="container mx-auto mt-8 grid grid-cols-3 gap-4">
-                    {reviews.slice(0, 6).map(review => (
+                    {reviews.length == 0 && <div>No reviews </div>}
+                    {reviews.slice(0, 3).map(review => (
                         <div key={review.id} className="bg-white p-4 rounded-lg shadow-md">
                             <div className="flex justify-between items-center mb-2">
                                 {review.author_details.avatar_path && (
@@ -101,6 +102,8 @@ export default function MovieDetails() {
                     ))}
                 </div>
             </div>
+            <div></div>
+            <Footer/>
 
 
         </section>

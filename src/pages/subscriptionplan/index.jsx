@@ -20,18 +20,18 @@ const SubscriptionPlan = () => {
               </div>
               <ul className="text-lg text-gray-600">
                 <li className="flex items-center mb-2 ">
-                <FaCheck className="text-pink-500 mr-4"/> <span className="mr-2">Limited downloads</span>
+                <FaCheck className="text-red-500 mr-4"/> <span className="mr-2">Limited downloads</span>
                 </li>
                 <li className="flex items-center mb-2">
-                <FaCheck className="text-pink-500 mr-4"/> <span className="mr-2">Up to 50 movies</span>
+                <FaCheck className="text-red-500 mr-4"/> <span className="mr-2">Up to 50 movies</span>
                 </li>
                 <li className="flex items-center mb-2">
-                <FaCheck className="text-pink-500 mr-4"/> <span className="mr-2">Contains ads</span>
+                <FaCheck className="text-red-500 mr-4"/> <span className="mr-2">Contains ads</span>
                 </li>
               </ul>
             </div>
             <Link to="/billing"><div className="bg-gray-100 py-4 px-6">
-              <button className="bg-purple-500 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-50">
+              <button className="bg-red-500 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-50">
                 Subscribe
               </button>
             </div></Link>
@@ -46,18 +46,18 @@ const SubscriptionPlan = () => {
               </div>
               <ul className="text-lg text-gray-600">
                 <li className="flex items-center mb-2">
-                <FaCheck className="text-pink-500 mr-4"/>  <span className="mr-2">Limited downloads</span>
+                <FaCheck className="text-red-500 mr-4"/>  <span className="mr-2">Limited downloads</span>
                 </li>
                 <li className="flex items-center mb-2">
-                <FaCheck className="text-pink-500 mr-4"/> <span className="mr-2">Up to 100 movies</span>
+                <FaCheck className="text-red-500 mr-4"/> <span className="mr-2">Up to 100 movies</span>
                 </li>
                 <li className="flex items-center mb-2">
-                <FaCheck className="text-pink-500 mr-4"/>  <span className="mr-2">Contains ads</span>
+                <FaCheck className="text-red-500 mr-4"/>  <span className="mr-2">Contains ads</span>
                 </li>
               </ul>
             </div>
             <Link to="/billing"><div className="bg-gray-100 py-4 px-6">
-              <button className="bg-purple-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-50">
+              <button className="bg-red-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-50">
                 Subscribe
               </button>
             </div></Link>
@@ -72,19 +72,19 @@ const SubscriptionPlan = () => {
               </div>
               <ul className="text-lg text-gray-600">
                 <li className="flex items-center mb-2">
-                <FaCheck className="text-pink-500 mr-4"/> <span className="mr-2">Limited downloads</span>
+                <FaCheck className="text-red-500 mr-4"/> <span className="mr-2">Limited downloads</span>
                 </li>
                 <li className="flex items-center mb-2 ">
-                <FaCheck className="text-pink-500 mr-4"/> <span className="mr-2">Up to 100 movies</span>
+                <FaCheck className="text-red-500 mr-4"/> <span className="mr-2">Up to 100 movies</span>
                 </li>
                 <li className="flex items-center mb-2 ">
-                <FaCheck className="text-pink-500 mr-4"/>  <span className="mr-2">No ads</span>
+                <FaCheck className="text-red-500 mr-4"/>  <span className="mr-2">No ads</span>
                 </li>
               </ul>
             </div>
             <Link to="/billing"><div className="bg-gray-100 py-4 px-6">
               <button
-                className="bg-purple-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-50"
+                className="bg-red-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-50"
               >
                 Subscribe
               </button>
@@ -100,18 +100,18 @@ const SubscriptionPlan = () => {
               </div>
               <ul className="text-lg text-gray-600">
                 <li className="flex items-center mb-2 ">
-                <FaCheck className="text-pink-500 mr-4"/>  <span className="mr-2">Limited downloads</span>
+                <FaCheck className="text-red-500 mr-4"/>  <span className="mr-2">Limited downloads</span>
                 </li>
                 <li className="flex items-center mb-2 ">
-                <FaCheck className="text-pink-500 mr-4"/> <span className="mr-2">Up to 100 movies</span>
+                <FaCheck className="text-red-500 mr-4"/> <span className="mr-2">Up to 100 movies</span>
                 </li>
                 <li className="flex items-center mb-2">
-                <FaCheck className="text-pink-500 mr-4"/> <span className="mr-2">No ads</span>
+                <FaCheck className="text-red-500 mr-4"/> <span className="mr-2">No ads</span>
                 </li>
               </ul>
             </div>
             <Link to="/billing"><div className="bg-gray-100 py-4 px-6">
-              <button className="bg-purple-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-50">
+              <button className="bg-red-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-50">
                 Subscribe
               </button>
             </div></Link>
