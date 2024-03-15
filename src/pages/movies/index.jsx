@@ -6,8 +6,8 @@ import Popular from "../../components/movieSections/movieLists/Popular";
 import TopRated from "../../components/movieSections/movieLists/TopRated";
 import Upcoming from "../../components/movieSections/movieLists/Upcoming";
 import DiscoverMovies from "../../components/movieSections/movieLists/DiscoverMovies";
+import MovieListHeader from "../../components/movieSections/movieLists/header/MovieListHeader";
 import SearchResults from "../../components/searchInput/SearchResults";
-// import MovieTrailer from "../../components/movieSections/movieLists/MovieTrailer";
 
 
 
@@ -18,7 +18,10 @@ const Movies = () => {
     return (
         // Main container for the movies page
         <>
-            <SearchResults />
+            <MovieListHeader />
+            <div className="ml-32 px-8 ps-5 mt-12">
+                <SearchResults />
+            </div>
             {/* <HeroSearchBar /> */}
             <main className="container mx-auto mt-20 px-20">
                 {/* Section for trending movies */}

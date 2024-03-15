@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SearchResultCard = ({ movie }) => {
   return (
-    <div className="flex-shrink-0 mr-4 w-32" style={{ width: "100%", maxWidth: "350px", height: "100%" }}>
+    <div className="flex-shrink-0 mr-4 w-32" style={{ width: "100%", maxWidth: "400px", height: "100%" }}>
       <div className="bg-gray-800 rounded-lg shadow-lg p-2 flex flex-col justify-between h-full text-left">
         <Link to={`/movies/${movie.id}`} ><img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} className="w-full h-auto rounded-t-md object-cover object-center" style={{ aspectRatio: "2/3" }} /></Link>
         <div className="movie-info mt-2">
