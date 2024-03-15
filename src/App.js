@@ -4,8 +4,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Landingpage from "./pages/landingpage";
 import Signin from "./pages/signinpage";
 import Signup from "./pages/signuppage";
-import Moviedetail from "./pages/moviedetailpage";
-import Movielist from "./pages/movielistpage";
+import Movies from "./pages/movies";
+import MovieDetails from "./pages/moviedetails";
+import WatchListP from "./pages/watchList/WatchListP";
+import Add from "./components/userActivities/Add";
+import Watched from "./components/userActivities/Watched";
 import SubscriptionPlan from "./pages/subscriptionplan";
 import BillingForm from "./pages/billing";
 import ConfirmationPage from "./pages/confirmation";
@@ -14,17 +17,20 @@ const myrouter = createBrowserRouter([
   {path:"/", element:<Landingpage/>},
   {path:"/signin", element:<Signin/>},
   {path:"/signup", element:<Signup/>},
-  {path:"/moviedetail", element:<Moviedetail/>},
-  {path:"/movielist", element:<Movielist/>},
   {path:"/subscription", element:<SubscriptionPlan/>},
   {path:"/billing", element:<BillingForm/>},
-  {path:"/confirmation", element:<ConfirmationPage/>}
+  {path:"/confirmation", element:<ConfirmationPage/>},
+  { path: "/movies", element: <Movies /> },
+  { path: "/movies/:id", element: <MovieDetails /> },
+  { path: "/movies/watchlist", element: <WatchListP /> },
+  { path: "/watchlist", element: <WatchListP /> },
+  { path: "/watchlist/watched", element: <Watched /> },
+  { path: "/watchlist/add", element: <Add /> },
 ])
 
 
 function App() {
-  return <RouterProvider router={myrouter}/>;
-  
+  return <RouterProvider router={myrouter} />;
 }
 
 export default App;
