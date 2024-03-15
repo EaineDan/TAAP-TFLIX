@@ -8,6 +8,8 @@ import Upcoming from "../../components/movieSections/movieLists/Upcoming";
 import DiscoverMovies from "../../components/movieSections/movieLists/DiscoverMovies";
 import MovieListHeader from "../../components/movieSections/movieLists/header/MovieListHeader";
 import SearchResults from "../../components/searchInput/SearchResults";
+import { Link } from "react-router-dom";
+import Footer from "../../components/landcomponents/footer";
 
 
 
@@ -18,6 +20,11 @@ const Movies = () => {
     return (
         // Main container for the movies page
         <>
+            <Link to="/">
+          <div className="absolute left-0 top-0 mt-10 ml-16">
+            <h1 className="text-6xl text-red-500 font-bold">TFLIX</h1>
+          </div>
+        </Link>
             <MovieListHeader />
             <div className="ml-32 px-8 ps-5 mt-12">
                 <SearchResults />
@@ -43,6 +50,7 @@ const Movies = () => {
                     {activeTab === 'upcoming' && <Upcoming />}
                 </section >
             </main >
+            <Footer/>
         </>
 
     );

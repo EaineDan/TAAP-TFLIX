@@ -1,15 +1,16 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
+import "./index.css";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-r from-black via-purple-700 to-pink-600 text-white bg-cover">
-      <div className="flex flex-col md:flex-row justify-evenly">
+    <div className="bg-gradient-to-r from-black via-purple-700 to-pink-600 text-white hover:cursor-pointer bg-cover">
+      <div className="flex justify-evenly">
         <div className="my-5 flex flex-col items-center">
           <span className="text-white font-bold mb-2 p-5 text-2xl">Follow Us</span>
-          <div className="flex justify-center md:justify-between">
+          <div className="flex justify-between">
             <FaFacebook className="text-blue-500 text-2xl" />
             <FaTwitter className="text-blue-400 ml-4 text-2xl" />
             <FaInstagram className="text-purple-500 ml-4 text-2xl" />
@@ -29,10 +30,18 @@ const Footer = () => {
         <div className="my-10 leading-loose p-5">
           <p className="font-bold text-lg">Movie List</p>
           <ul>
-            <li><Link to="/movielist">Newest Releases</Link></li>
-            <li><Link to="/movielist">Top Rated</Link></li>
-            <li><Link to="/movielist">Popular</Link></li>
-            <li><Link to="/movielist">Upcoming</Link></li>
+            <Link to="/movielist">
+              <li>Newest Releases</li>
+            </Link>
+            <Link to="/movielist">
+              <li>Top Rated</li>
+            </Link>
+            <Link to="/movielist">
+              <li>Popular</li>
+            </Link>
+            <Link to="/movielist">
+              <li>Upcoming</li>
+            </Link>
           </ul>
         </div>
         <div className="my-10 leading-loose p-5">
@@ -40,7 +49,9 @@ const Footer = () => {
           <ul>
             <li>Privacy Policy</li>
             <li>Refund Policy</li>
-            <li><Link to="/subscription">Subscription plan</Link></li>
+            <Link to="/subscription">
+              <li>Subscription plan</li>
+            </Link>
           </ul>
         </div>
       </div>
