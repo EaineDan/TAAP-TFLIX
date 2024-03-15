@@ -7,8 +7,8 @@ import TopRated from "../../components/movieSections/movieLists/TopRated";
 import Upcoming from "../../components/movieSections/movieLists/Upcoming";
 import DiscoverMovies from "../../components/movieSections/movieLists/DiscoverMovies";
 import SearchResults from "../../components/searchInput/SearchResults";
-// import SearchModal from "../../components/movieCard/SearchModal";
-// import HeroSearchBar from "../../components/searchInput/SearchBar";
+// import MovieTrailer from "../../components/movieSections/movieLists/MovieTrailer";
+
 
 
 
@@ -22,6 +22,9 @@ const Movies = () => {
             {/* <HeroSearchBar /> */}
             <main className="container mx-auto mt-20 px-20">
                 {/* Section for trending movies */}
+                <section className="bg-gray-100">
+                    {/* <MovieTrailer /> */}
+                </section>
                 < section className="bg-gray-100">
                     < DiscoverMovies />
                 </section >

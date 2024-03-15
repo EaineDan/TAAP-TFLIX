@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import SearchResultCard from '../movieCard/SearchResultCards';
 import styles from "../searchInput/index.module.css"
+import WatchListHeader from '../watchListHeader/WatchlistHeader';
+import AddCard from '../movieCard/AddCard';
 
 
 const SearchResults = () => {
@@ -34,6 +35,7 @@ const SearchResults = () => {
 
     return (
         <div>
+            <WatchListHeader />
             <div className="heroBanner">
                 <div className="flex">
                     <input
@@ -51,7 +53,7 @@ const SearchResults = () => {
             <div className='max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
                 {searchResults.map((result) => (
                     <div key={result.id} className="bg-gray-100 rounded-lg shadow-lg p-4">
-                        <SearchResultCard movie={result} />
+                        <AddCard movie={result} />
                     </div>
                 ))}
             </div>

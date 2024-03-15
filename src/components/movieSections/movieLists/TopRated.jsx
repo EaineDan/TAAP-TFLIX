@@ -26,7 +26,7 @@ const TopRated = () => {
     return (
         <>
             <div className="mt-8">
-                <h2 className="text-2xl font-semibold mb-4">Top Rated</h2>
+                <h2 className="text-2xl font-semibold mb-4 ml-5 text-gray-500">Top Rated</h2>
                 <div className="flex overflow-x-auto space-x-4 ml-5 text-gray-500 whitespace-nowrap" style={{ direction:'rtl'}}>
                     {/* Map through the movies array to display each movie card */}
                     {topRated.map(movie => (

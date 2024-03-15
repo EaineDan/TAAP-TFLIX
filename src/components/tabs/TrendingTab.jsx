@@ -12,7 +12,7 @@ const TrendingTabBar = ({ activeTab, setActiveTab }) => {
                     Today
                 </button>
                 <button
-                    className={`h-10 px-5 border ${activeTab === 'week' ?'hover:bg-gray-300 text-teal-300 bg-gradient-to-r from-sky-600 gray-700 gray-600 gray-700 to-gray-800 ' : 'border-gray-100'} rounded-full focus:outline-none focus:border-blue-500 hover:bg-gray-200 hover:text-emerald-400 text-gray-900`}
+                    className={`h-10 px-5 border ${activeTab === 'week' ? 'hover:bg-gray-300 text-teal-300 bg-gradient-to-r from-sky-600 gray-700 gray-600 gray-700 to-gray-800 ' : 'border-gray-100'} rounded-full focus:outline-none focus:border-blue-500 hover:bg-gray-200 hover:text-emerald-400 text-gray-900`}
                     onClick={() => setActiveTab('week')}
                 >
                     This Week

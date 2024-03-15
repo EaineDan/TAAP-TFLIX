@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import MovieCard from '../../movieCard/MovieCard';
 import TrendingTabBar from '../../tabs/TrendingTab';
+import TrendingMovieCard from '../../movieCard/TrendingMovieCard';
 
 const Trending = () => {
 
@@ -36,7 +36,7 @@ const Trending = () => {
             <TrendingTabBar activeTab={activeTab} setActiveTab={setActiveTab} />
             <div className="flex overflow-x-auto space-x-4">
                 {movies.map(movie => (
-                    <MovieCard key={movie.id} movie={movie} />
+                    <TrendingMovieCard key={movie.id} movie={movie} />
                 ))}
             </div>
         </div>
