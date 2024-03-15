@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaStar } from "react-icons/fa";
+import { FaArrowRight, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const NewReleased = () => {
@@ -49,23 +49,24 @@ const NewReleased = () => {
                 alt={movie.title}
                 className="w-full h-3/4 object-cover"
               /></Link>
-              <div className="p-4 h-1/4 flex flex-col justify-between">
+              <div className="p-4 h-1/4 flex flex-col justify-between leading-loose">
                 <h2 className="text-lg font-semibold text-gray-800">
                   {movie.title}
                 </h2>
                 <p className="text-sm text-gray-600">{movie.release_date}</p>
-                <p className="text-sm text-gray-600 flex mx-2"><FaStar/>{movie.vote_average}</p>
+                <p className="text-sm text-gray-600 flex mx-2"><FaStar className="text-yellow-300 mr-2 mt-1"/>{movie.vote_average}</p>
               </div>
             </div>
           </div>
         ))}
       </div>
-      <Link to="/movies"><div className="text-center py-2">
+      <Link to="/movies"><div className="text-center py-2 mt-2">
         <button
           onClick={handleSeeMore}
           className="bg-red-500 text-white rounded px-4 font-bold py-2 hover:bg-pink-500"
         >
           View More
+          
         </button>
       </div></Link>
     </div>
