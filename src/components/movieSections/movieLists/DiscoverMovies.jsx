@@ -3,8 +3,8 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import DiscoverMovieCard from "../../movieCard/DiscoverMovieCard"
 
-import DiscoverMovieCard from "../../movieCard/DiscoverMovieCard";
 
 const DiscoverMovies = () => {
     // Define the API URL
@@ -16,7 +16,7 @@ const DiscoverMovies = () => {
     const fetchMovies = async () => {
         try {
             // Send GET request to the API
-            const response = await axios.get(`${BASE_URL}/discover/movie/?language=en-US&page=6`, {
+            const response = await axios.get(`${BASE_URL}/discover/movie?language=en-US&page=6`, {
                 params: {
                     api_key: process.env.REACT_APP_MOVIE_API_KEY
                 }
@@ -45,7 +45,7 @@ const DiscoverMovies = () => {
 
     return (
         <>
-            <h2 className="text-lg font-semibold text-gray-800 mr-4 ml-12 px-6">Discover Movies</h2>
+            <h2 className="text-dark text-lg mb-4 mr-4">Discover Movies</h2>
             {/* Container for trending movies with horizontal scroll */}
             <div className="flex overflow-x-auto">
                 <Slider {...settings} className="w-full">
