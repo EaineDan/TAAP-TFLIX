@@ -42,7 +42,7 @@ const SearchResults = () => {
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onKeyDown={handleKeyDown}
                         placeholder="Search movies, persons, company, etc.."
-                        className={styles.input}
+                        className={styles.searchinput}
                     />
                 </div>
             </div>
