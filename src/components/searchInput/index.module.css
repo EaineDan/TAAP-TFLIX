@@ -12,7 +12,7 @@
   z-index: 1;
 }
 
-searchinput[type="text"] {
+.searchinput[type="text"] {
   width: 130px;
   box-sizing: border-box;
   border: 2px solid #ccc;
