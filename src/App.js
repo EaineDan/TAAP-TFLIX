@@ -19,7 +19,7 @@ const myrouter = createBrowserRouter([
   {path:"/signup", element:<Signup/>},
   {path:"/subscription", element:<SubscriptionPlan/>},
   {path:"/billing", element:<BillingForm/>},
-  {path:"/confirmation", element:<ConfirmationPage/>}
+  {path:"/confirmation", element:<ConfirmationPage/>},
   { path: "/movies", element: <Movies /> },
   { path: "/movies/:id", element: <MovieDetails /> },
   { path: "/movies/watchlist", element: <WatchListP /> },
