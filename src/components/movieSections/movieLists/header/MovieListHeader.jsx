@@ -7,10 +7,10 @@ const MovieListHeader = () => {
             <div className="bg-black text-white py-20">
                 <div className="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
                     <div className="flex flex-col w-full lg:w-1/3 justify-center items-start p-8">
-                        <h1 className="text-3xl md:text-5xl p-2 text-rose-500 tracking-loose">Our Movies</h1>
+                        <h1 className="text-3xl md:text-5xl p-2 text-red-500 tracking-loose">Our Movies</h1>
                         <h2 className="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">Space : The Timeless Infinity</h2>
                         <p className="text-sm md:text-base text-gray-50 mb-4">Explore your favourite Movies.</p>
-                        <Link to={'/'}><span className="bg-transparent hover:bg-rose-500 text-rose-500 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-rose-500 hover:border-transparent">
+                        <Link to={'/'}><span className="bg-transparent hover:bg-red-500 text-red-500 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-red-500 hover:border-transparent">
                             Explore Now
                         </span></Link>
                     </div>
