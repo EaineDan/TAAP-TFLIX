@@ -1,0 +1,17 @@
+.subby{
+    background: url("https://media.istockphoto.com/id/688782978/photo/happy-latin-american-couple-at-the-movies.jpg?s=612x612&w=0&k=20&c=e0pxGUNbIi-IRttCrp3Pq1hntkzRLoV5gsAMZ4rjTJ0=");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+  
+}
+
+.card {
+    width: 300px; 
+    height: 400px; 
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+

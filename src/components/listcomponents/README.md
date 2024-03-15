@@ -1,1 +1,0 @@
-Kindly put all components of movie list page here

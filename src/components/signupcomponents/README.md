@@ -1,2 +1,0 @@
-Kindly put all components of sign up page here
-

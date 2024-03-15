@@ -1,10 +1,12 @@
-import Footer from "../../components/landcomponents/footer";
-import Navbar from "../../components/landcomponents/navbar";
+import React from 'react'
+import Navbar from '../../components/landcomponents/navbar'
+import Footer from '../../components/landcomponents/footer';
 
-export default function Movielist() {
-  return <>
-  <Navbar/>
-  {/* All components for movielist should fall between Navbar and footer... */}
-  <Footer/>
-  </>;
+const MovieList = () => {
+  return (
+    <Navbar/>,
+    <Footer/>
+  )
 }
+
+export default MovieList;
