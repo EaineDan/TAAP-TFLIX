@@ -45,7 +45,7 @@ const DiscoverMovies = () => {
 
     return (
         <>
-            <h2 className="text-dark text-lg mb-4 mr-4">Discover Movies</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mr-4 ml-4 px-5 text-40">Discover Movies</h2>
             {/* Container for trending movies with horizontal scroll */}
             <div className="flex overflow-x-auto">
                 <Slider {...settings} className="w-full">
