@@ -81,7 +81,7 @@ export default function MovieDetails() {
             {/* Review deatils */}
             <div className="p-10">
                 <h1 className="font-bold text-center text-3xl">Reviews</h1>
-                <div className="container mx-auto mt-8 grid grid-cols-3 gap-4">
+                <div className="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {reviews.length == 0 && <div className="text-3xl text-center font-bold ">No reviews for this Movie </div>}
                     {reviews.slice(0, 3).map(review => (
                         <div key={review.id} className="bg-white p-4 rounded-lg shadow-md">
@@ -92,7 +92,7 @@ export default function MovieDetails() {
                             </div>
                             <div>
                                 <span className="text-sm block ">{review.author}</span>
-                                <p className="text-sm text-gray-500 ">Rating: {review.author_details.rating}/10</p>
+                                <p className="text-sm text-black ">Rating: {review.author_details.rating}/10</p>
 
                             </div>
 

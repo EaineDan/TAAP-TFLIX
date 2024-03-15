@@ -87,10 +87,10 @@ export default function Navbar() {
       </div>
       {isMenuOpen && (
         <div className="md:hidden mt-2">
-          <Link to="/movielist" onClick={toggleMenu}>
+          <Link to="/movies" onClick={toggleMenu}>
             <span className="block py-2">Movies</span>
           </Link>
-          <Link to="/pricing" onClick={toggleMenu}>
+          <Link to="/billing" onClick={toggleMenu}>
             <span className="block py-2">Pricing</span>
           </Link>
           <Link to="/signin" onClick={toggleMenu}>
