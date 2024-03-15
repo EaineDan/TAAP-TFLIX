@@ -49,12 +49,12 @@ const Upcoming = () => {
                 alt={movie.title}
                 className="w-full h-3/4 object-cover"
               /></Link>
-              <div className="p-4 h-1/4 flex flex-col justify-between">
+              <div className="p-4 h-1/4 flex flex-col justify-between leading-loose ">
                 <h2 className="text-lg font-semibold text-gray-800">
                   {movie.title}
                 </h2>
                 <p className="text-sm text-gray-600">{movie.release_date}</p>
-                <p className="text-sm text-gray-600 flex mx-2"><FaStar className="text-yellow-300"/>{movie.vote_average}</p>
+                <p className="text-sm text-gray-600 flex mx-2"><FaStar className="text-yellow-300 mr-2 mt-1"/>{movie.vote_average}</p>
               </div>
             </div>
           </div>

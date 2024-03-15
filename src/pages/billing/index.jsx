@@ -1,10 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import mtn from "../../assets/images/mtn.png";
+import voda from "../../assets/images/voda.png";
+import paypal from "../../assets/images/paypal.png";
+import card from "../../assets/images/card.jpg";
 
 
 
 const BillingForm = () => {
-  
 
   return (
       <div
@@ -79,6 +82,12 @@ const BillingForm = () => {
                     Submit
                   </button>
                 </Link>
+              </div>
+              <div className='flex ml-20 items-center'>
+              <img className='mr-3 w-10 ' src={mtn} alt='mtn'/>
+              <img className='mr-3 w-10' src={voda} alt="voda"/>
+              <img className='mr-3 w-10' src={paypal} alt="paypal"/>
+              <img className='mr-3 w-10' src={card} alt="card"/>
               </div>
             </form>
           </div>
