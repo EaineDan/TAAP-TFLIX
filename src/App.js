@@ -7,7 +7,8 @@ import Signup from "./pages/signuppage";
 import Moviedetail from "./pages/moviedetailpage";
 import Movielist from "./pages/movielistpage";
 import SubscriptionPlan from "./pages/subscriptionplan";
-import Billing from "./pages/billing";
+import BillingForm from "./pages/billing";
+import ConfirmationPage from "./pages/confirmation";
 
 const myrouter = createBrowserRouter([
   {path:"/", element:<Landingpage/>},
@@ -16,7 +17,8 @@ const myrouter = createBrowserRouter([
   {path:"/moviedetail", element:<Moviedetail/>},
   {path:"/movielist", element:<Movielist/>},
   {path:"/subscription", element:<SubscriptionPlan/>},
-  {path:"/billing", element:<Billing/>}
+  {path:"/billing", element:<BillingForm/>},
+  {path:"/confirmation", element:<ConfirmationPage/>}
 ])
 
 

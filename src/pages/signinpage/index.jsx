@@ -21,7 +21,7 @@ const SignInForm = () => {
     >
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <div
-          className={`p-4 max-w-lg mx-auto bg-gray-800 rounded-xl shadow-md m1-4 ${
+          className={`p-4 max-w-lg mx-auto bg-gray-800 bg-opacity-80 rounded-xl shadow-md m1-4  ${
             isOpen ? "" : "hidden"
           }`}
         >
@@ -86,6 +86,9 @@ const SignInForm = () => {
           </p>
         </div>
       </div>
+      <Link to="/"><div className="absolute left-0 top-0 mt-10 ml-16">
+        <h1 className="text-6xl text-red-500 font-bold">TFLIX</h1>
+      </div></Link>
     </div>
   );
 };

@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/">
-            <span className="text-pink-500 text-4xl font-mono">TFLIX</span>
+            <span className="text-red-500 text-6xl font-mono">TFLIX</span>
           </Link>
         </div>
         <div className="flex items-center">
