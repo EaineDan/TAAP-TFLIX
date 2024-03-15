@@ -46,13 +46,13 @@ export default function MovieDetails() {
     return (
         <section>
             <div className="relative h-screen">
-                <img className='absolute inset-0 w-full h-full object-cover' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+                <img className=' w-full h-full object-cover' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
                 <div class="absolute inset-0 bg-black opacity-70"></div>
                 <div className="flex justify-between">
                     {/* Additional image at the left */}
                     <div className="absolute inset-0 mb-20 flex items-center">
                         <img
-                            className='hidden sm:block ml-6 h-3/4 md:w-1/2 rounded-lg shadow-lg max-w-80'
+                            className='hidden md:block ml-6 h-3/4 md:w-1/2 rounded-lg shadow-lg max-w-80'
                             style={{ boxShadow: '0px 4px 6px rgba(247, 67, 102, 0.5)' }}
                             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                             alt={movie.title}
